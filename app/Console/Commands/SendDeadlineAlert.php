@@ -51,7 +51,7 @@ class SendDeadlineAlert extends Command
             foreach($task->assigned_to as $assigned_to){
                 dispatch(new SendEmailJob($task,$assigned_to));
             }
-            // $task->end_falg=true;
+            $task->end_falg=true;
             $task->save();
         }
         // echo $task;
