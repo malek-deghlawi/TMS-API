@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->unsignedInteger('publisher_id');
             $table->text('description');
-            $table->date('deadline');
+            $table->date('deadline')->default(0);
             $table->boolean('end_falg');
             $table->timestamps();
 
